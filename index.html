@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-theme="mosque-gold">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>my-project — Workshop DIY</title>
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Righteous&family=Tajawal:wght@400;500;700&family=Bangers&family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="app">
+    <div class="deco-band top-band" aria-hidden="true"></div>
+
+    <div class="rows-container">
+
+      <!-- ═══════════════════ HEADER ═══════════════════ -->
+      <div class="header">
+        <div class="bismillah" aria-hidden="true">
+          <span class="bism-ornament">&#x2726;</span>
+          بِسْمِ ٱللَّٰهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ
+          <span class="bism-ornament">&#x2726;</span>
+        </div>
+
+        <div class="title-block">
+          <div class="logo-wrap" id="logoWrap"></div>
+          <div>
+            <h1 data-i18n="title">my-project</h1>
+            <div class="subtitle" data-i18n="subtitle">🚀 explore · 🎨 create · 💡 innovate</div>
+          </div>
+        </div>
+
+        <div class="header-right">
+          <div class="header-dropdowns">
+            <select id="langSelect" class="mini-select" aria-label="Language">
+              <option value="en" selected>EN</option>
+              <option value="fr">FR</option>
+              <option value="ar">عربي</option>
+            </select>
+            <select id="themeSelect" class="mini-select" aria-label="Theme">
+              <option value="mosque-gold" data-i18n-opt="t_mosque">Mosque</option>
+              <option value="zellige" data-i18n-opt="t_zellige">Zellige</option>
+              <option value="andalus" data-i18n-opt="t_andalus">Andalus</option>
+              <option value="space" data-i18n-opt="t_space">Space</option>
+              <option value="jungle" data-i18n-opt="t_jungle">Jungle</option>
+              <option value="robot" data-i18n-opt="t_robot">Robot</option>
+            </select>
+          </div>
+          <div class="status-pill" id="statusPill">
+            <span class="status-dot" id="statusDot"></span>
+            <span id="statusText" data-i18n="disconnected">Disconnected</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══════════════════ MAIN CARD ═══════════════════ -->
+      <div class="card" id="mainCard">
+        <div class="card-header">
+          <div>
+            <div class="card-title"><span class="icon">🧩</span> <span data-i18n="mainSection">Main Section</span></div>
+            <div class="card-subtitle"><span data-i18n="mainDesc">Describe your project here</span> <span class="version-tag">v1.0</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══════════════════ SECTION A ═══════════════════ -->
+      <details class="collapsible">
+        <summary><span class="icon">📚</span> <span data-i18n="sectionA">Section A</span></summary>
+        <div class="card"></div>
+      </details>
+
+      <!-- ═══════════════════ SECTION B ═══════════════════ -->
+      <details class="collapsible">
+        <summary><span class="icon">🎬</span> <span data-i18n="sectionB">Section B</span></summary>
+        <div class="card"></div>
+      </details>
+
+      <!-- ═══════════════════ LOG ═══════════════════ -->
+      <details class="collapsible">
+        <summary><span class="icon">📜</span> <span data-i18n="activityLog">Activity Log</span></summary>
+        <div class="card log-card">
+          <div class="card-header">
+            <div class="card-subtitle" data-i18n="eventsMsg">Events &amp; messages</div>
+            <div class="log-controls">
+              <button id="clearLogBtn" class="btn-sm"><span class="btn-icon">🧹</span><span data-i18n="clear">Clear</span></button>
+              <button id="copyLogBtn" class="btn-sm"><span class="btn-icon">📋</span><span data-i18n="copy">Copy</span></button>
+            </div>
+          </div>
+          <div class="log" id="logContainer" aria-live="polite"></div>
+          <div class="log-footer">
+            <span>Workshop DIY</span>
+            <span class="badge"><strong>v1.0</strong></span>
+          </div>
+        </div>
+      </details>
+
+    </div>
+    <div class="deco-band bottom-band" aria-hidden="true"></div>
+  </div>
+
+  <!-- Toast -->
+  <div id="toastIndicator" class="toast-indicator">
+    <div class="toast-inner">
+      <div class="spinner"></div>
+      <div id="toastMessage" class="toast-text">Working…</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
